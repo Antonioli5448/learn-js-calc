@@ -1,27 +1,25 @@
-const calc = (ident,a,b)=>{
-    if(ident && a && b || (a && b) !== Number(a) && Number(b)){
-        if (isNaN(a + b)) {
-            return "eror"
-
+const calc = ( ident,a,b ) => {
+    if( ident && a && b || (a && b) !== Number(a) && Number(b) ) {
+        if ( isNaN(a + b) ) {
+            return "error"
         }
-        if(ident === 'sum'){
+        if( ident === 'sum' ) {
             return a + b
-        }else if(ident === 'remains'){
+        } else if( ident === 'remains' ) {
             return a % b
-        }else if(ident === 'subtract'){
+        } else if( ident === 'subtract' ) {
             return a - b
-        }else if(ident === 'exponent'){
+        } else if( ident === 'exponent' ) {
             return a ** b
-        }else if(ident === 'multiplication'){
+        } else if( ident === 'multiplication' ) {
             return a * b
-        }else if(ident === 'division'){
+        } else if( ident === 'division' ) {
             return a / b
-        } else{
+        } else {
             return 'unknow operation'
         } 
     
-       }else{
-        return 'Error'
-       }
-   }
-   console.log(calc(sum,4,5))
+    } else {
+        return 'error'
+      }
+}
